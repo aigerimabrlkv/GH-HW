@@ -1,1 +1,15 @@
+    Random rand= new Random();
+        int number= Math.abs(rand.nextInt()) % 100;
+        System.out.println(number);
+        Scanner sc = new Scanner(System.in);
+        int guess =sc.nextInt();
 
+        if(number == guess){
+            System.out.println("You Win!");
+        } else{
+            if(number > guess){
+                System.out.println("less!");
+            }else{
+                System.out.println("greater!");
+            }
+        }
