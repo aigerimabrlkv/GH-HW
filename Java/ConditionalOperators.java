@@ -2,20 +2,27 @@ import java.util.Scanner;
     public class ConditionalOperators {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
+//ax+b=0
+            int a = scanner.nextInt();
+            int b = scanner.nextInt();
 
-            int bishopRow = scanner.nextInt();   // строка слона
-            int bishopCol = scanner.nextInt();   // столбец слона
-            int targetRow = scanner.nextInt();   // строка фигуры
-            int targetCol = scanner.nextInt();   // столбец фигуры
 
-            if (Math.abs(bishopRow - targetRow) == Math.abs(bishopCol - targetCol)) {
-                System.out.println("YES");
+            if (a == 0) {
+                if (b == 0) {
+                    System.out.println("INF");
+                } else {
+                    System.out.println("NO");
+                }
             } else {
-                System.out.println("NO");
+                if (-b % a == 0) {
+                    System.out.println(-b / a);
+                } else {
+                    System.out.println("NO");
+                }
             }
         }
-
     }
+
 
 
 
