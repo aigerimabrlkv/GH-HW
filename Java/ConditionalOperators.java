@@ -3,12 +3,16 @@ import java.util.Scanner;
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
 
-            int bishopRow = scanner.nextInt();   // строка слона
-            int bishopCol = scanner.nextInt();   // столбец слона
-            int targetRow = scanner.nextInt();   // строка фигуры
-            int targetCol = scanner.nextInt();   // столбец фигуры
+            int queenRow = scanner.nextInt();     // строка ферзя
+            int queenCol = scanner.nextInt();     // столбец ферзя
+            int targetRow = scanner.nextInt();    // строка фигуры
+            int targetCol = scanner.nextInt();    // столбец фигуры
 
-            if (Math.abs(bishopRow - targetRow) == Math.abs(bishopCol - targetCol)) {
+            boolean sameRow = queenRow == targetRow;
+            boolean sameCol = queenCol == targetCol;
+            boolean sameDiagonal = Math.abs(queenRow - targetRow) == Math.abs(queenCol - targetCol);
+
+            if (sameRow || sameCol || sameDiagonal) {
                 System.out.println("YES");
             } else {
                 System.out.println("NO");
